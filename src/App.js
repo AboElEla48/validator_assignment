@@ -10,24 +10,26 @@ class App extends Component {
     textVal: ''
   };
 
+  /**Handle text change */
   textChangeLengthHandler = (event) => {
     this.setState( {textLength: event.target.value.length,
       textVal: event.target.value});
 
   }
 
+  /** Render each character from input strin to box*/
   renderCharComponents = () => {
     let tags = [];
 
+    // render box for each character
     for (let i = 0; i < this.state.textVal.length; i++) {
       tags.push(<CharComponent
         key={'text_' + i + this.state.textVal}
         char= {this.state.textVal[i]}/>
       );
-
-
     }
 
+      //return tags
      return (
        <div>
        {tags}
@@ -36,6 +38,7 @@ class App extends Component {
      );
   }
 
+  /** App component render*/
   render() {
 
     return (
@@ -57,10 +60,14 @@ class App extends Component {
             onChange = {this.textChangeLengthHandler}
             value ={this.state.textVal} />
 
-          <p>{this.state.textLength}</p>
+            /** Write the text length*/
+          <p>Text Length: {this.state.textLength}</p>
+
+          /** Write the text length validation method*/
           <ValidationComponent
             textLength={this.state.textLength} />
 
+          /** Split string letters*/
           {this.renderCharComponents()}
         </div>
 
