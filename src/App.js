@@ -59,7 +59,7 @@ class App extends Component {
 
     return (
       <div>
-        <p>
+
         <ol>
           <li>Create input field in App Component with TextChange Handler which outputs the text lentgh below in paragraph</li>
           <li>Create a new component (Validation Component) which receives text length as property</li>
@@ -69,7 +69,7 @@ class App extends Component {
           <li>When you click a CharComponent, it should be removed from list</li>
         </ol>
         <br />------------------------------------------------------------------------------------------------------------------------------
-        </p>
+        
 
         <div className="App">
           <input
