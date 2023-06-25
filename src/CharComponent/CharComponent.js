@@ -3,7 +3,9 @@ import '../Styles/CompStyles.css'
 
 const charComponent = (props) => {
   return (
-    <div className='innerDisplayStyle'>
+    <div
+      className='innerDisplayStyle'
+      onClick= {props.removalHandler}>
       {props.char}
     </div>
   );

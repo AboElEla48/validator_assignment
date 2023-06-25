@@ -25,10 +25,10 @@ class App extends Component {
     for (let i = 0; i < this.state.textVal.length; i++) {
       tags.push(<CharComponent
         key={'text_' + i + this.state.textVal}
-        char= {this.state.textVal[i]}/>
+        char= {this.state.textVal[i]}
+        removalHandler= {this.itemRemovalHandler}/>
       );
     }
-
       //return tags
      return (
        <div>
@@ -36,6 +36,11 @@ class App extends Component {
        </div>
 
      );
+  }
+
+  /** Handle Item removal click*/
+  itemRemovalHandler = () => {
+    
   }
 
   /** App component render*/
@@ -60,14 +65,14 @@ class App extends Component {
             onChange = {this.textChangeLengthHandler}
             value ={this.state.textVal} />
 
-            /** Write the text length*/
+          {/** Write the text length*/}
           <p>Text Length: {this.state.textLength}</p>
 
-          /** Write the text length validation method*/
+          {/** Write the text length validation method*/}
           <ValidationComponent
             textLength={this.state.textLength} />
 
-          /** Split string letters*/
+          {/** Split string letters*/}
           {this.renderCharComponents()}
         </div>
 
