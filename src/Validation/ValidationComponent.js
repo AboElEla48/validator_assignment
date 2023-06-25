@@ -7,9 +7,9 @@ const validationComponent = (props) => {
     : 'Text is too short';
 
   return (
-      <div>
+      <p>
         {validationMsg}
-      </div>
+      </p>
     );
 
 

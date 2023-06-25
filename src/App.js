@@ -21,12 +21,15 @@ class App extends Component {
   renderCharComponents = () => {
     let tags = [];
 
+
+
     // render box for each character
     for (let i = 0; i < this.state.textVal.length; i++) {
-      tags.push(<CharComponent
-        key={'text_' + i + this.state.textVal}
-        char= {this.state.textVal[i]}
-        removalHandler= {() => this.itemRemovalHandler(i)}/>
+      tags.push(
+        <CharComponent
+          key={'text_' + i + this.state.textVal}
+          char= {this.state.textVal[i]}
+          removalHandler= {() => this.itemRemovalHandler(i)}/>
       );
     }
       //return tags

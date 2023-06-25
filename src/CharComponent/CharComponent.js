@@ -3,11 +3,11 @@ import '../Styles/CompStyles.css'
 
 const charComponent = (props) => {
   return (
-    <div
+    <span
       className='innerDisplayStyle'
       onClick= {props.removalHandler}>
       {props.char}
-    </div>
+    </span>
   );
 };
 
