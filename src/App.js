@@ -26,7 +26,7 @@ class App extends Component {
       tags.push(<CharComponent
         key={'text_' + i + this.state.textVal}
         char= {this.state.textVal[i]}
-        removalHandler= {this.itemRemovalHandler}/>
+        removalHandler= {() => this.itemRemovalHandler(i)}/>
       );
     }
       //return tags
@@ -39,8 +39,16 @@ class App extends Component {
   }
 
   /** Handle Item removal click*/
-  itemRemovalHandler = () => {
-    
+  itemRemovalHandler = (itemIndex) => {
+    let str = this.state.textVal;
+    str = this.state.textVal.slice(0, itemIndex);
+    if(itemIndex +1 < this.state.textVal.length) {
+      str += this.state.textVal.slice(itemIndex + 1);
+    }
+    this.setState({
+      textLength: str.length,
+      textVal: str
+    });
   }
 
   /** App component render*/
