@@ -1,8 +1,11 @@
 .innerDisplayStyle {
   display: 'inline-box';
-  padding: 16px;
+  padding: 3px;
   text-align: 'center';
-  margin: 16px;
-  border: '1px solid black';
+  margin: 3px;
+  background-color: #d4d7e7;
+  border:2px;
+  border-style: groove;
+  border-color: #1e201e;
 
 }

@@ -17,14 +17,20 @@ class App extends Component {
   }
 
   renderCharComponents = () => {
+    let tags = [];
+
+    for (let i = 0; i < this.state.textVal.length; i++) {
+      tags.push(<CharComponent
+        key={'text_' + i + this.state.textVal}
+        char= {this.state.textVal[i]}/>
+      );
+
+
+    }
+
      return (
        <div>
-       {
-           // for (let i = 0; i < this.state.textVal.length; i++) {
-           //   <CharComponent
-           //     char= {this.state.textVal[i]}/>
-           // }
-         }
+       {tags}
        </div>
 
      );
