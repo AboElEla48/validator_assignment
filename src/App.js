@@ -23,6 +23,8 @@ class App extends Component {
           placeHolder='Measure Text Length' />
 
         <p>{this.state.textLength}</p>
+        <ValidationComponent
+          textLength={this.state.textLength} />
 
       </div>
     );
